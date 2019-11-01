@@ -30,13 +30,33 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+    The Document Object Mode (DOM)l is an object representation of the html elements of a webpage. It is an interface that with which we can interact with and manipulate the page, changing document structure, content, and styling. The object model is a tree structure with each DOM element as a tree node, containing all the same property keys as each other node. Some of these node properties are informational while others are methods that we can use for interaction. The DOM, creating and propagating event objects, which hold information about the event type and target, up the tree.
+    When a web page is loaded into a browser, the browser first looks for the HTML file. The browser uses the HTML file to build the page (this coupled with the CSS file later. The browser parses these instructions and builds a model for how the page should look and act using Javascript. This model is a Javascript Object containing every element in order on the page. This Object is the DOM.
+    
+    The DOM is built as a data structure known as a ‘Tree’, because parent elements have nested children elements (or leaves). We can follow branches of the tree to get to the exact leaf (or leaves) that we want to access. Each branch of our DOM tree can be it’s own tree. 
+
 2. What is an event?
+
+    Every interaction a user has with a site is an event, a click, moving the mouse, scrolling the page, pressing a key on the keyboard, these are all events. When an event happens on a page it is known as a trigger.
 
 3. What is an event listener?
 
+    Specific elements we chose.. to listen to specific events (like a mouse click) and fire a callback when that event occurs.
+
+    An event listener is an element with a callback that is triggered by the event. When an event is triggered on an element, the callback is run. 
+    We put an event listener on an element and give it a callback. There are dozens of events an element can listen for. And when one of those events happens on that element, we can do something about it. This is called an event listener. 
+    Some elements have a native default reaction to certain events. For example, form elements will refresh the page on submit. .preventDefault is a method on the event object and it will stop an HTML element from reacting in its default way. This will be used less than .stopPropagation, but it is important to know about.
+
 4. Why would we convert a NodeList into an Array?
 
+    We convert a NodeList into an Array to get be able to use the  array methods because NodeList is like an array but does not have access to array methods.
+    Pro tip: The Array class does contain a method we can use to create an array from an array-like object, called .from(). To use this we would simply give .from the array-like object as it’s only argument.
+    Array.from(arrayLikeObject)
+    Ex. const arr  = Array.from(nl);
+
 5. What is a component?
+
+    A component is made of several parts: HTML, CSS, or JavaScript brought together for reuse in a website or application.
 
 ### Git Set up
 
