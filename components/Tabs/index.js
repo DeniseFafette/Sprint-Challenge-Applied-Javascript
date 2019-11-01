@@ -7,3 +7,23 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
+
+//const tabsArray = [];
+
+//tabsArray.forEach()
+
+axios.get('https://lambda-times-backend.herokuapp.com/topics')
+  
+  // handle success
+  .then(response => {
+
+    // const cards = document.querySelector('.cards')
+    // cards.appendChild(
+    //   gitCard(response.data)
+    // )
+    console.log(response);
+  })
+
+  // handle error
+  .catch(error => console.log(error))
+  
