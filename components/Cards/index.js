@@ -17,3 +17,18 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+  
+  // handle success
+  .then(response => {
+
+    // const tab = document.querySelector('.tab')
+    // tab.appendChild(
+    //   newTabs(response.data)
+    // )
+    console.log(response);
+  })
+
+  // handle error
+  .catch(error => console.log(error))
